@@ -1,0 +1,45 @@
+@use "../abstract/functions" as *;
+
+.galery {
+  width: 445px;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.focused-image {
+  border-radius: 15px;
+  max-width: 100%;
+}
+
+.galery__focus {
+  overflow: hidden;
+  width: 100%;
+  aspect-ratio: 1;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.galery__thumbnails {
+  display: flex;
+  gap: toEm(31);
+}
+.galery__thumbnail {
+  overflow: hidden;
+  border-radius: 10px;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.active-thumbnail {
+  box-shadow: 0 0 0 2px var(--clr-primary-400);
+  opacity: 0.5;
+}

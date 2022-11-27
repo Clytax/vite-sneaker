@@ -1,0 +1,33 @@
+@use "../variables/color" as *;
+@use "../variables/text" as *;
+@use "./functions" as *;
+
+:root {
+  // Create Color Variables from the Variables
+  @each $color, $value in $colors {
+    --clr-#{$color}: #{$value};
+  }
+
+  // Create Font Variables from the Variables
+  @each $font, $value in $type-scale {
+    --fs-#{$font}: #{$value};
+  }
+}
+
+// Create font-size classes with media query
+
+@each $size, $value in $type-scale {
+  .fs-#{$size} {
+    font-size: var(--fs-#{$size});
+  }
+}
+
+// Create Color Classes
+@each $name, $value in $colors {
+  .text-#{$name} {
+    color: #{$value};
+  }
+  .bg-#{$name} {
+    background-color: #{$value};
+  }
+}

@@ -1,0 +1,29 @@
+@use "../abstract/functions" as *;
+
+$type-scale: (
+  100: toRem(13),
+  200: toRem(18),
+  300: toRem(16),
+  600: toRem(28),
+  800: toRem(28),
+);
+
+@media screen and (min-width: 800px) {
+  .fs-100 {
+    font-size: toRem(12);
+  }
+  .fs-200 {
+    font-size: toRem(15);
+  }
+  .fs-600 {
+    font-size: 44px;
+  }
+}
+
+//            Font Sizes
+//  Desktop:              Mobile:
+//  13px (Company name)   12px (Company name)
+//  15px (Header items)  18px ( Header Items)
+//  16px (Body, button, all carts)  16px (Body, button, all carts)
+//  28px (Price)  28px (Price)
+//  44px ( Title )  28px ( Title )

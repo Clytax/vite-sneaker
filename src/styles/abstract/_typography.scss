@@ -1,0 +1,75 @@
+@use "../abstract/functions" as *;
+:root {
+  --fw-bold: 700;
+  --fw-regular: 400;
+
+  --ff-kumbh: "Kumbh Sans", sans-serif;
+
+  --lh-1: 1.15;
+  --lh-2: 1.6;
+
+  --csp-1: 1.85px;
+
+  --title-padding: 0.7em 0 0.7em 0;
+
+  --price-padding: 24px 0;
+
+  @media screen and (min-width: 768px) {
+    --lh-1: 1.1;
+
+    --csp-1: 2px;
+
+    --price-padding: 1.75em 0 2em 0;
+  }
+}
+
+.lh-1 {
+  line-height: var(--lh-1);
+}
+
+.lh-2 {
+  line-height: var(--lh-2);
+}
+
+.csp-1 {
+  letter-spacing: var(--csp-1);
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.fw-regular {
+  font-weight: var(--fw-regular);
+}
+
+.fw-bold {
+  font-weight: var(--fw-bold);
+}
+
+.line-through {
+  text-decoration: line-through;
+}
+
+.company-title {
+  text-transform: uppercase;
+  letter-spacing: var(--csp-1);
+  font-size: var(--fs-100);
+  font-weight: var(--fw-bold);
+}
+
+.product-title {
+  font-size: var(--fs-600);
+  color: var(--clr-neutral-800);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-1);
+  padding: var(--title-padding);
+}
+
+.product-text {
+  font-size: var(--fs-300);
+  font-weight: var(--fw-regular);
+  color: var(--clr-neutral-700);
+
+  line-height: 1.75;
+}

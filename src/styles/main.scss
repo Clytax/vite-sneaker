@@ -1,0 +1,24 @@
+// Abstract
+@import "abstract/index";
+
+// Base
+@import "base/index";
+
+// Utility
+@import "utility/index";
+
+// Variables
+@import "variables/index";
+
+// Page
+@import "pages/index";
+
+// Reset
+@import "base/reset";
+
+// Components
+@import "components/index";
+
+body {
+  font-family: var(--ff-kumbh);
+}
